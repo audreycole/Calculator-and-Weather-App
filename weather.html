@@ -1,0 +1,52 @@
+<head>
+<title>My Web Page</title>
+<style type="text/css">
+body{
+	width: 760px; /* how wide to make your web page */
+	background-color: teal; /* what color to make the background */
+	margin: 0 auto;
+	padding: 0;
+	font:12px/16px Verdana, sans-serif; /* default font */
+}
+div#main{
+	background-color: #FFF;
+	margin: 0;
+	padding: 10px;
+}
+</style>
+
+<script>
+	function fetchWeather() {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open("GET", "http://classes.engineering.wustl.edu/cse330/content/weather_json.php", true);
+		// METHOD: either GET or POST.
+		// URL_OF_SERVER_SCRIPT: the path to your server-side script relative to the current page.  For example, process_ajax.php
+		// ASYNCRONOUS_FLAG: Should be true in order to perform the request asynchronously.  (Having a value of false will freeze the browser until the request is completed.)
+
+		//To send GET data, append the information to the end of the URL_OF_SERVER_SCRIPT, as you would normally do, and then call xmlHttp.send(), passing null as the parameter:
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open("GET", "process_ajax.php?var1=val1&var2=val2", true);
+		xmlHttp.send(null);
+
+		//Listening for a Response
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open("GET", "hello.txt", true);
+		xmlHttp.addEventListener("load", ajaxCallback, false);
+		xmlHttp.send(null);
+		// ...
+		function ajaxCallback(event){
+			var jsonData = JSON.parse(event.target.responseText);
+			alert( "Your file contains the text: " + event.target.responseText );
+		}
+
+	}
+	document.addEventListener("DOMContentLoaded", fetchWeather, false);
+</script>
+
+</head>
+<body><div id="main">
+ 
+<!-- CONTENT HERE -->
+ 
+</div></body>
+</html>
