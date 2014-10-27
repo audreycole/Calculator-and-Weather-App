@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Module5-individual-audrey-cole-414710 : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Module5-individual-audrey-cole-414710</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/audreycole/Module5-individual-Audrey-Cole-414710">View on GitHub</a>
+
+          <h1 id="project_title">Module5-individual-audrey-cole-414710</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/audreycole/Module5-individual-Audrey-Cole-414710/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/audreycole/Module5-individual-Audrey-Cole-414710/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>&lt;!DOCTYPE html&gt;
+
+</p>
+    Calculator
+    
+
+
+<p></p>
+    
+    Derpy Calculator <br>
+    
+       Number 1: <br>
+       Number 2: <br>
+
+<pre><code>    &lt;input type="radio" name="myradio" id="plus" value="plus" checked="checked"/&gt; Plus
+    &lt;input type="radio" name="myradio" id="minus" value="minus"/&gt; Minus
+    &lt;input type="radio" name="myradio" id="multiply" value="multiply"/&gt; Multiply
+    &lt;input type="radio" name="myradio" id="divide" value="divide"/&gt; Divide
+
+    &lt;input type="hidden" name="submitted" value="true"&gt;
+    &lt;input type="button" name="submit" value="Calculate" id="btn"&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    Result: 
+    &lt;input type="text" id="result"&gt;
+&lt;/form&gt;
+&lt;script&gt;
+        var num1, num2;
+        var result;
+
+        function getNum1() {
+            num1 = document.getElementById('num1').value;
+            return Number(num1);
+        }
+        function getNum2() {
+            num2 = document.getElementById('num2').value;
+            return Number(num2);
+        }
+        function setResult() {
+            document.getElementById('result').value = result;
+        }
+
+        function doCalc() {
+            num1 = getNum1();
+            num2 = getNum2();
+
+            var plus = document.getElementById('plus').checked;
+            var minus = document.getElementById('minus').checked;
+            var divide = document.getElementById('divide').checked;
+            var multiply = document.getElementById('multiply').checked;
+
+            if(multiply){
+                result = num1 * num2;
+            }
+            else if(divide &amp;&amp; (num1 != 0) &amp;&amp; (num2 == 0)){
+                result = "No division by 0!";
+            }else if(divide) {
+                result = num1 / num2;
+            }else if (minus) {
+                result = num1 - num2;
+            }else {
+                result = num1 + num2;
+            }
+
+            setResult();
+        }
+
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", doCalc);
+
+&lt;/script&gt;
+
+&lt;/fieldset&gt;
+</code></pre>
+
+<p></p>
+
+<p></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Module5-individual-audrey-cole-414710 maintained by <a href="https://github.com/audreycole">audreycole</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
